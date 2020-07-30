@@ -23,11 +23,15 @@ const Product = db.define("product", {
   imageUrl: {
     type: Sequelize.STRING,
     defaultValue:
-      "https://image.freepik.com/free-vector/useful-gold-label-black-background_1035-4814.jpg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSydrE5LfVTGYQ4EQkIgseljIuWymh6S6uiIw&usqp=CAU",
     validate: { isUrl: true },
   },
   category: {
     type: Sequelize.STRING,
+  },
+  quantity: {
+    type: Sequelize.INTEGER,
+    validate: { min: 1 },
   },
 });
 
